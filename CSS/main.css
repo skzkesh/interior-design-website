@@ -8,6 +8,7 @@ body {
     background: lightgray;
     min-height: 100vh;
     overflow-x: hidden;
+    font-family: 'Georgia', serif;
 }
 
 header {
@@ -28,8 +29,57 @@ header {
     border-radius: 20px;
     margin: 0 10px;
     font-weight: 600;
+    text-decoration: none;
 }
 
 .navigation a:hover {
     color: pink;
+}
+
+.title {
+    position: relative;
+    display:grid;
+    place-items: center;
+    align-content: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#text {
+    position: absolute;
+    font-size: 5em;
+    color:blueviolet;
+}
+
+#caption {
+    position: absolute;
+    padding-top: 18vh;
+    font-family: 'Georgia', serif;
+}
+
+.about {
+    position: relative;
+    display:flex;
+    justify-content: center;
+    height: 80vh;
+    background-color: white;
+    text-align: center;
+}
+
+#about_us {
+    position: absolute;
+    padding-top: 8vh;
+    font-size: 3em;
+    font-family: 'Georgia', serif;
+}
+
+#about_us_capt {
+    position: absolute;
+    padding: 20vh 25vh;
+}
+
+.location {
+    position: relative;
+    height: 80vh;
+    background-color: pink;
 }
