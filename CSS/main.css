@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -45,7 +46,7 @@ header {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#text {
+#title_intihpl {
     position: absolute;
     font-size: 5em;
     color:blueviolet;
@@ -80,6 +81,47 @@ header {
 
 .location {
     position: relative;
+    display:flex;
+    align-items: center; /* Centers vertically */
     height: 80vh;
     background-color: pink;
+}
+
+#loc {
+    position: absolute; /* Positions it independently */
+    top: 12%; /* Moves it to the vertical center */
+    left: 50%; /* Moves it to the horizontal center */
+    transform: translate(-50%, -50%); /* Adjusts centering properly */
+    font-size: 3em;
+    font-family: 'Georgia', serif;
+    text-align: center;
+}
+
+#google_map {
+    position: absolute;
+    justify-content: left;
+    top: 25%;
+    margin-left: 10%;
+}
+
+#location_capt {
+    position: absolute;
+    justify-content: left;
+    top: 28%;
+    margin-left: 47%;
+    font-size: 1.2em;
+    font-family: 'Georgia', serif;
+    text-align: left;
+    line-height: 2.5;
+}
+
+#operational_hour {
+    position: absolute;
+    justify-content: left;
+    top: 53%;
+    margin-left: 47%;
+    font-size: 1.2em;
+    font-family: 'Georgia', serif;
+    text-align: left;
+    line-height: 2.5;
 }
