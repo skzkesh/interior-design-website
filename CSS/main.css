@@ -125,3 +125,32 @@ header {
     text-align: left;
     line-height: 2.5;
 }
+
+.contact_homepage {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centers logos horizontally */
+    align-items: center; /* Centers logos vertically */
+    height: 50vh;
+    background-image: url('../Assets/contact_section_image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contact_homepage #contact_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_homepage #contact_logo a {
+    margin: 0 10px; /* Adds space between logos */
+    display: inline-block;
+}
+
+.contact_homepage #contact_logo img {
+    width: 70px; /* Set a size you like */
+    height: auto;
+}
+
