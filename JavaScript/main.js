@@ -28,3 +28,12 @@ ww("init",{
         "async": 1
     }
 });
+
+window.addEventListener("scroll", function() {
+    let header = document.querySelector("header");
+    if (window.scrollY > 50) { // Change when user scrolls 50px down
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
