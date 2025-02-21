@@ -6,7 +6,6 @@
 }
 
 body {
-    background: lightgray;
     min-height: 100vh;
     overflow-x: hidden;
     font-family: 'Georgia', serif;
@@ -37,6 +36,17 @@ header {
     color: pink;
 }
 
+.title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Black transparency */
+    z-index: 1; /* Ensures it is above the background but below content */
+}
+
 .title {
     position: relative;
     display:grid;
@@ -44,18 +54,30 @@ header {
     align-content: center;
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../Assets/pexels-fotoaibe-1643384.jpg);
+    background-size: 120% 120%;  /* Ensures the whole image is visible */
+    background-repeat: no-repeat;
+    background-position: center; /* Centers the image */
+}
+
+
+.title * {
+    position: relative;
+    z-index: 2; /* Ensures text and other content appear above the overlay */
 }
 
 #title_intihpl {
     position: absolute;
     font-size: 5em;
-    color:blueviolet;
+    color:rgb(236, 223, 223);
 }
 
 #caption {
     position: absolute;
-    padding-top: 18vh;
+    padding-top: 16vh;
     font-family: 'Georgia', serif;
+    text-align: center;
+    color: rgb(203, 181, 181);
 }
 
 .about {
@@ -133,9 +155,8 @@ header {
     align-items: center; /* Centers logos vertically */
     height: 50vh;
     background-image: url('../Assets/contact_section_image.jpg');
-    background-size: cover;
+    background-size: 100% cover;
     background-position: center;
-    background-repeat: no-repeat;
 }
 
 .contact_homepage #contact_logo {
