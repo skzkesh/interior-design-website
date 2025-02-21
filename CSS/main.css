@@ -11,6 +11,16 @@ body {
     font-family: 'Georgia', serif;
 }
 
+.fade-in {
+    opacity: 0;
+    transition: opacity 1.4s ease-out, transform 1.4s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 header {
     position: fixed;
     top: 0;

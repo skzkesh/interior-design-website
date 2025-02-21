@@ -37,3 +37,10 @@ window.addEventListener("scroll", function() {
         header.classList.remove("scrolled");
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    let elements = document.querySelectorAll(".fade-in");
+    elements.forEach((el) => {
+        el.classList.add("show");
+    });
+});
