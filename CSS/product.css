@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Georgia', serif;
+    background-color: rgb(255, 255, 255);
+    background-size: 120% 120%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1.4s ease-out, transform 1.4s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 101;
+    background: none; 
+    transition: background 0.3s ease-in-out; /* Smooth transition */
+    color:rgb(0, 0, 0);
+}
+
+header.scrolled {
+    background: rgba(255, 255, 255, 0.731); /* Darker transparency when scrolling */
+}
+
+.navigation a {
+    color:rgb(0, 0, 0);
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 650;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: black;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    align-items: center;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+#hpl_section {
+    margin-top: 150px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#hpl_title {
+    font-size: 2.2em;
+}
+
+#hpl_capt {
+    margin-top: 15px;
+}
+
+#plywood_section {
+    margin-top: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#plywood_title {
+    font-size: 2.2em;
+}
+
+#plywood_capt {
+    margin-top: 15px;
+}
+
+#hardware_section {
+    margin-top: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#hardware_title {
+    font-size: 2.2em;
+}
+
+#hardware_capt {
+    margin-top: 15px;
+}
+
+#flooring_section {
+    margin-top: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#flooring_title {
+    font-size: 2.2em;
+}
+
+#flooring_capt {
+    margin-top: 15px;
+}
+
+#wall_panel_section {
+    margin-top: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#wall_panel_title {
+    font-size: 2.2em;
+}
+
+#wall_panel_capt {
+    margin-top: 15px;
+}
+
+.card {
+    width: 325px;
+    height: 440px;
+    background-color: rgb(54, 45, 30);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(8, 3, 3, 0.792);
+    display: inline-block;
+    transition: transform 0.3s ease;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 50px;
+    transition: transform 0.3s ease;
+    transform-origin: bottom center; 
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img{
+    width: 100%;
+    height: 250px;
+}
+
+.card-content {
+    font-family: 'Verdana';
+    padding: 16px;
+}
+
+.card-content h3{
+    font-size: 25px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.card-content p{
+    color: white;
+    font-size: 14px;
+    line-height: 1.3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+}
+
+.card-content .btn{
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #321818;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 16px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%; 
+    }
+    
+    .card-container {
+        justify-content: center; 
+    }
+}
+
+.products_preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background:rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.products_preview .preview {
+    display: none;
+    padding: 2rem;
+    text-align: center;
+    background: #fff;
+    position: relative;
+    margin: 2rem;
+    width: 40rem;
+}
+
+.products_preview.active {
+    display: flex; /* Make the overlay visible */
+}
+
+.preview.active {
+    display: block; /* Make the matching preview box visible */
+}
+
+.products_preview .preview img {
+    height: 30rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: black;
+  }
+
+
+.contact_homepage::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Black transparency */
+    z-index: 1; /* Ensures it is above the background but below content */
+}
+
+.contact_homepage {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centers logos horizontally */
+    align-items: center; /* Centers logos vertically */
+    height: 50vh;
+    background-image: url('../Assets/contact_section_image.jpg');
+    background-size: 100% 260%;
+    background-position: center;
+}
+
+.contact_homepage * {
+    position: relative;
+    z-index: 2; /* Ensures text and other content appear above the overlay */
+}
+
+.contact_homepage #contact_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_homepage #contact_logo a {
+    margin: 0 10px; /* Adds space between logos */
+    display: inline-block;
+}
+
+.contact_homepage #contact_logo img {
+    width: 70px; /* Set a size you like */
+    height: auto;
+}

@@ -44,3 +44,69 @@ document.addEventListener("DOMContentLoaded", function () {
         el.classList.add("show");
     });
 });
+
+let lastScrollTop = 0;
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+    header.classList.remove('hidden');
+});
+
+// Show the header on hover
+header.addEventListener('mouseenter', () => {
+    header.classList.remove('hidden');
+});
+
+header.addEventListener('mouseleave', () => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+        header.classList.add('hidden');
+    }
+});
+
+
+// blm selesai
+// const video = document.getElementById('video_promotion');
+// const videos = [
+//     {
+//     source: [
+//         {
+//         src: "https://personal.cs.cityu.edu.hk/~cs2204/2023/video/video1.mp4", type: "video/mp4"
+//         },
+//         {
+//         src: "https://personal.cs.cityu.edu.hk/~cs2204/2023/video/video1.mkv",type: "video/mkv"
+//         }
+//     ],
+//     autoplay: true,
+//     controls: true,
+//     muted: true,
+//     alt: "Your browser does not support this video format"
+//     },
+//     {
+//     source: [
+//         {
+//         src: "https://personal.cs.cityu.edu.hk/~cs2204/2023/video/video2.mp4", type: "video/mp4"
+//         },
+//         {
+//         src: "https://personal.cs.cityu.edu.hk/~cs2204/2023/video/video2.mp4",type: "video/mkv"
+//         }
+//     ],
+//     autoplay: true,
+//     controls: true,
+//     muted: true,
+//     alt: "Your browser does not support this video format"
+//     }
+// ];
+// var activeVideo = 0;
+
+// video.addEventListener('ended', function(e) {
+//     activeVideo = (activeVideo + 1) % videos.length; 
+//     video.src = videos[activeVideo].source[0].src;
+//     video.play();
+// });
+
+// video.src = videos[activeVideo].source[0].src;
+// video.play();
+
+   

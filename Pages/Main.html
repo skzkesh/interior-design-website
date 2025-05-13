@@ -13,7 +13,7 @@
         <nav class="navigation fade-in">
             <a href="#title_page">Home</a>
             <a href="#about">About</a>
-            <a href="">Product</a>
+            <a href="Product.html">Product</a>
             <a href="#loc">Location</a>
             <a href="#contact_homepg">Contact</a>
         </nav>
@@ -24,26 +24,142 @@
         <h3 id="caption" class="fade-in">HPL • Plywood • Kitchen Appliances • SPC Vinyl Flooring • WPC & Wall Panels • Cerarl Opening</h3>
     </section>
 
-    <section class="about">
-        <h2 id="about_us">Tentang Kami</h2>
-        <p id="about_us_capt">INTI HPL Balikpapan menjual plywood, blockmin, TACO HPL, AICA HPL, TACO sheet, TACO edging, vinyl lantai, hardware & furniture fittings.</p>
-        <div class="container">
-            <div class="card-wrapper">
-                <ul class ="card-list">
-                    <li class="card-item">
-                        <a href="#">
-                            <img src="" alt="card img" class="card-image">
-                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, aliquam et adipisci porro obcaecati unde ullam ex quae eveniet, corrupti quam accusamus nulla ad explicabo ea. Ea quidem eveniet commodi!</p>
-                        </a>
-                    </li>
-                </ul>
+    <div class="about" id="about">
+        <h2 id="about_us">About Us</h2>
+    </div>
+        <div class="slider_container">
+            <div class="slider">
+                <input type="radio" name="tes" id="p-1">
+                <input type="radio" name="tes" id="p-2">
+                <input type="radio" name="tes" id="p-3" checked>
+                <input type="radio" name="tes" id="p-4">
+                <input type="radio" name="tes" id="p-5">
+
+            <div class="testimonials">
+                <label class="item" for="p-1" style="background-image: url('../Assets/p-2.jpeg'); background-size: cover; background-position: center;">
+                </label>
+                <label class="item" for="p-2" style="background-image: url('../Assets/p-1.jpeg'); background-size: cover; background-position: center;">
+                </label>
+                <label class="item" for="p-3" style="background-image: url('../Assets/p-3.jpeg'); background-size: cover; background-position: center;">
+                </label>
+                <label class="item" for="p-4" style="background-image: url('../Assets/p-4.jpeg'); background-size: cover; background-position: center;">
+                </label>
+                <label class="item" for="p-5" style="background-image: url('../Assets/p-5.jpeg'); background-size: cover; background-position: center;">
+                </label>
+            </div>
+
+            <div class="dots">
+                <label for="p-1"></label>
+                <label for="p-2"></label>
+                <label for="p-3"></label>
+                <label for="p-4"></label>
+                <label for="p-5"></label>
+            </div>
+        </div>
+        </div>
+    <section class="about_us_capt">
+        <p id="about_us_text">Since our establishment in 2016, we have become one of the leading providers of interior needs in Balikpapan. Our store offers a wide range of high-quality products designed to meet all your decoration and renovation project needs. Our product offerings include plywood, blockmin, TACO HPL, AICA HPL, TACO sheets, TACO edging, vinyl flooring, as well as hardware and furniture fittings. Visit our store to see all the products we offer in person. If you have any questions or would like to inquire about product availability, feel free to contact us via the available WhatsApp number. Our team is ready to assist you.
+        </p>
+    </section>
+    
+    <div class="news">
+    </div>
+
+    <section class="categories" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 id="category_title">Kategori Produk</h2>
+            <p id="category_capt"> Dapatkan berbagai variasi produk dan merk dari kategori dibawah ini </p>
+
+            <div class="main_category_carousel">
+                <a href="Product.html#hpl_title">
+                    <div class="card">
+                        <img src="../Assets/Manfaat-HPL.jpg">
+                        <div class="card-content">
+                            <h5>HPL</h5>
+                            <p>1 item</p>
+                        </div>
+                    </div>
+                </a>
+        
+                <a href="Product.html#plywood_title">
+                    <div class="card">
+                        <img src="../Assets/plywood_melamin.jpg">
+                        <div class="card-content">
+                            <h5>Plywood</h5>
+                            <p>3 item</p>
+                        </div>
+                    </div>
+                </a>
+        
+                <a href="Product.html#hardware_title">
+                    <div class="card">
+                        <img src="../Assets/kitchenware.webp">
+                        <div class="card-content">
+                            <h5>Hardware</h5>
+                            <p>3 item</p>
+                        </div>
+                    </div>
+                </a>
+        
+                <a href="Product.html#flooring_title">
+                    <div class="card">
+                        <img src="../Assets/vinyl_flooring.webp">
+                        <div class="card-content">
+                            <h5>Flooring</h5>
+                            <p>3 item</p>
+                        </div>
+                    </div>
+                </a>
+        
+                <a href="Product.html#wall_panel_title">
+                    <div class="card">
+                        <img src="../Assets/WPC.webp">
+                        <div class="card-content">
+                            <h5>Wall Panels</h5>
+                            <p>2 item</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
-    <section class="news">
-        <h2 id="news">Produk baru</h2>
-    </section>
+    <div class="space_after_newsletter">
+    
+    </div>
+    
+    <section class="newsletter">
+        <div class="subscriber">
+          <h3 id="newsletter_title">Inquiry</h3>
+          <p id="newsletter_capt">Ask about stock availability, brands, and product updates using the box below. We will contact you shortly via WhatsApp.</p>
+          <form action="#" id="subscribe_form">
+            <fieldset>
+              <div class="form-group">
+                <label for="name_input">Name</label>
+                <input type="text" id="name_input" placeholder="Name">
+              </div>
+      
+              <div class="form-group">
+                <label for="whatsapp_input">Phone Number</label>
+                <input type="tel" id="whatsapp_input" placeholder="(e.g. 081135687)">
+              </div>
+      
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" cols="40" placeholder="Type your question here..."></textarea>
+              </div>
+      
+              <div class="form-group button-group">
+                <button type="submit" value="submit" class="submit_button"><span>Submit</span></button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+      
+    <div class="space_after_newsletter">
+    
+    </div>
 
     <section class="location">
         <h2 id="loc">Lokasi</h2>
