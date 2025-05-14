@@ -14,7 +14,7 @@ To view the website locally:
 
 1. Clone this GitHub repository to your device:
    ```bash
-   git clone https://github.com/your-username/interior-design-website.git
+   git clone https://github.com/skzkesh/interior-design-website.git
 2. Navigate to the Pages folder.
 3. Right-click on the Main.html file and open it in your browser.
 4. This file serves as the homepage.
