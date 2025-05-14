@@ -275,6 +275,11 @@ header.scrolled {
 .newsletter {
     height: 80vh;
     background-color: rgba(65, 41, 28, 0.852);
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: column;  
 }
 
 .news {
@@ -371,9 +376,12 @@ header.scrolled {
     position: relative;
     display:flex;
     flex-direction: column;
-    align-items: center; /* Centers vertically */
+    align-items: center;
     height: 60vh;
     background-color: whitesmoke;
+    flex-direction: column;  
+    height: auto;
+    padding-bottom: 35px;
 }
 
 #category_title {
@@ -460,13 +468,12 @@ header.scrolled {
 }
 
 #loc {
+    top: 14%;
     position: absolute; /* Positions it independently */
-    top: 12%; /* Moves it to the vertical center */
     left: 50%; /* Moves it to the horizontal center */
     transform: translate(-50%, -50%); /* Adjusts centering properly */
     font-size: 3em;
     font-family: 'Georgia', serif;
-    text-align: center;
 }
 
 #google_map {
@@ -515,7 +522,7 @@ header.scrolled {
     justify-content: center; /* Centers logos horizontally */
     align-items: center; /* Centers logos vertically */
     height: 50vh;
-    background: rgba(0, 0, 0, 0.26);
+    background: rgba(0, 0, 0, 0.317);
     background-size: 100% 260%;
     background-position: center;
 }

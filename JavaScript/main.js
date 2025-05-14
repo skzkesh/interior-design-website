@@ -65,48 +65,20 @@ header.addEventListener('mouseleave', () => {
     }
 });
 
-
-// blm selesai
-// const video = document.getElementById('video_promotion');
-// const videos = [
-//     {
-//     source: [
-//         {
-//         src: "https://personal.cs.cityu.edu.hk/~cs2204/2023/video/video1.mp4", type: "video/mp4"
-//         },
-//         {
-//         src: "https://personal.cs.cityu.edu.hk/~cs2204/2023/video/video1.mkv",type: "video/mkv"
-//         }
-//     ],
-//     autoplay: true,
-//     controls: true,
-//     muted: true,
-//     alt: "Your browser does not support this video format"
-//     },
-//     {
-//     source: [
-//         {
-//         src: "https://personal.cs.cityu.edu.hk/~cs2204/2023/video/video2.mp4", type: "video/mp4"
-//         },
-//         {
-//         src: "https://personal.cs.cityu.edu.hk/~cs2204/2023/video/video2.mp4",type: "video/mkv"
-//         }
-//     ],
-//     autoplay: true,
-//     controls: true,
-//     muted: true,
-//     alt: "Your browser does not support this video format"
-//     }
-// ];
-// var activeVideo = 0;
-
-// video.addEventListener('ended', function(e) {
-//     activeVideo = (activeVideo + 1) % videos.length; 
-//     video.src = videos[activeVideo].source[0].src;
-//     video.play();
-// });
-
-// video.src = videos[activeVideo].source[0].src;
-// video.play();
-
-   
+function handleSubmit(){
+    document.getElementById('subscribe_form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        const response = await fetch('/api/send-inquiry', {
+          method: 'POST',
+          body: JSON.stringify({
+            phone: formData.get('phone'),
+            question: formData.get('question')
+          }),
+          headers: { 'Content-Type': 'application/json' }
+        });
+      
+        const result = await response.json();
+        alert(result.message);
+      });
+}
