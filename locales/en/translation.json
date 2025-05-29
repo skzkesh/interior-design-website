@@ -1,0 +1,21 @@
+{
+    "nav_about": "About",
+    "nav_product": "Product",
+    "nav_location": "Location",
+    "nav_contact": "Contact",
+    "language": "EN",
+    "about_us": "About Us",
+    "about_us_text": "Since our establishment in 2016, we have become one of the leading providers of interior needs in Balikpapan. Our store offers a wide range of high-quality products designed to meet all your decoration and renovation project needs. Our product offerings include plywood, blockmin, TACO HPL, AICA HPL, TACO sheets, TACO edging, vinyl flooring, as well as hardware and furniture fittings. Visit our store to see all the products we offer in person. If you have any questions or would like to inquire about product availability, feel free to contact us via the available WhatsApp number. Our team is ready to assist you.",
+    "category_title": "Product Category",
+    "category_capt": "Get a variety of products and brands from the categories below",
+    "newsletter_title": "Inquiry",
+    "newsletter_capt": "Ask about stock availability, brands, and product updates using the box below. We will contact you shortly via WhatsApp.",
+    "name_input": "Name",
+    "phone_number_input": "Phone Number",
+    "message_input": "Message",
+    "submit_button": "Submit",
+    "location": "Location",
+    "operational_hour": "Operational Hour:",
+    "operational_date_weekdays": "Monday to Friday 08:00 - 17:00",
+    "operational_date_weekend": "Saturday 08:00 - 16:00"
+}

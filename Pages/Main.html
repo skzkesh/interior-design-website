@@ -6,16 +6,19 @@
     <title>INTI HPL BALIKPAPAN</title>
     <link rel="stylesheet" href="../css/main.css">
     <script defer src="script.js" defer></script>
+    <script src="https://unpkg.com/i18next@21.6.3/i18next.min.js"></script>
+
 </head>
 <body>
     <header>
         <h1 class="fade-in">INTI HPL</h1>
         <nav class="navigation fade-in">
             <a href="#title_page">Home</a>
-            <a href="#about">About</a>
-            <a href="Product.html">Product</a>
-            <a href="#loc">Location</a>
-            <a href="#newsletter_title">Contact</a>
+            <a href="#about" data-i18n="nav_about">About</a>
+            <a href="Product.html" data-i18n="nav_product">Product</a>
+            <a href="#loc" data-i18n="nav_location">Location</a>
+            <a href="#newsletter_title" data-i18n="nav_contact">Contact</a>
+            <a id="#web_language" data-i18n="language">EN</a>
         </nav>
     </header>
 
@@ -25,7 +28,7 @@
     </section>
 
     <div class="about" id="about">
-        <h2 id="about_us">About Us</h2>
+        <h2 id="about_us" data-i18n="about_us"></h2>
     </div>
         <div class="slider_container">
             <div class="slider">
@@ -58,8 +61,7 @@
         </div>
         </div>
     <section class="about_us_capt">
-        <p id="about_us_text">Since our establishment in 2016, we have become one of the leading providers of interior needs in Balikpapan. Our store offers a wide range of high-quality products designed to meet all your decoration and renovation project needs. Our product offerings include plywood, blockmin, TACO HPL, AICA HPL, TACO sheets, TACO edging, vinyl flooring, as well as hardware and furniture fittings. Visit our store to see all the products we offer in person. If you have any questions or would like to inquire about product availability, feel free to contact us via the available WhatsApp number. Our team is ready to assist you.
-        </p>
+        <p id="about_us_text" data-i18n="about_us_text"></p>
     </section>
     
     <div class="news">
@@ -67,8 +69,8 @@
 
     <section class="categories" class="py-16">
         <div class="container mx-auto px-4">
-            <h2 id="category_title">Kategori Produk</h2>
-            <p id="category_capt"> Dapatkan berbagai variasi produk dan merk dari kategori dibawah ini </p>
+            <h2 id="category_title" data-i18n="category_title"></h2>
+            <p id="category_capt" data-i18n="category_capt"></p>
 
             <div class="main_category_carousel">
                 <a href="Product.html#hpl_title">
@@ -130,27 +132,27 @@
 
     <section class="newsletter">
         <div class="subscriber">
-          <h3 id="newsletter_title">Inquiry</h3>
-          <p id="newsletter_capt">Ask about stock availability, brands, and product updates using the box below. We will contact you shortly via WhatsApp.</p>
+          <h3 id="newsletter_title" data-i18n="newsletter_title"></h3>
+          <p id="newsletter_capt" data-i18n="newsletter_capt"></p>
           <form action="#" id="subscribe_form">
             <fieldset>
               <div class="form-group">
-                <label for="name_input">Name</label>
+                <label for="name_input" data-i18n="name_input"></label>
                 <input type="text" id="name_input" placeholder="Name">
               </div>
       
               <div class="form-group">
-                <label for="whatsapp_input">Phone Number</label>
+                <label for="whatsapp_input" data-i18n="phone_number_input"></label>
                 <input type="tel" id="whatsapp_input" placeholder="(e.g. 081135687)">
               </div>
       
               <div class="form-group">
-                <label for="message">Message</label>
+                <label for="message" data-i18n="message_input"></label>
                 <textarea id="message" name="message" rows="5" cols="40" placeholder="Type your question here..."></textarea>
               </div>
       
               <div class="form-group button-group">
-                <button type="submit" value="submit" class="submit_button" onclick="handleSubmit()"><span>Submit</span></button>
+                <button type="submit" value="submit" class="submit_button" onclick="handleSubmit()" data-i18n="submit_button"><span></span></button>
               </div>
             </fieldset>
           </form>
@@ -162,15 +164,15 @@
     </div>
 
     <section class="location">
-        <h2 id="loc">Lokasi</h2>
+        <h2 id="loc" data-i18n="location"></h2>
         <iframe id="google_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.884496922965!2d116.86877657513898!3d-1.2396580987485215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df1466bc4e4addb%3A0xb5d0e2a1e1b6ad98!2sINTI%20HPL%20BALIKPAPAN!5e0!3m2!1sid!2sca!4v1739837219905!5m2!1sid!2sca" width="450" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <p id="location_capt">Ruko Balikpapan Baru, Jl. Dahlia Raya No.Raya D3/24,<br>
             Damai, Balikpapan Kota, Kota Balikpapan,<br>
             Kalimantan Timur 76114, Indonesia</p>
         <div id="operational_hour">
-            <h3>Jam Operasional:</h3>
-            <p>Senin - Jumat 08:00 - 17:00</p>
-            <p>Sabtu 08:00 - 16:00</p>
+            <h3 id="operational_hour" data-i18n="operational_hour"></h3>
+            <p id="operational_date_weekdays" data-i18n="operational_date_weekdays"></p>
+            <p id="operational_date_weekend" data-i18n="operational_date_weekend"></p>
         </div>
     </section>
 
